@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savings Calculator</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<!-- Jumbotron for Calculator -->
+<div class="jumbotron">
+    <h1 class="text-center">How much your savings this year will be worth when you retire</h1>
+</div>
+<!-- Calculations and Inputs HTML -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <h3 class="card-header">Your Savings This Year</h3>
+                <div class="card-body" id="userSavings-text"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                 <h3 class="card-header">Your Savings Worth at Retirement</h3>
+                <div class="card-body" id="userResult-text"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header">Other Inputs</h3>
+                    <div class="card-body" id="inputYears-text">Years till retirement: </div>
+                    <div class="card-body" id="growthRate-text"></div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<script>
+
+// Chapter 1: Initialize variables
+var userAge = 0;
+var growthRate = 7;
+var userSavings = 0;
+var userResult = 0
+var inputYears = 65 - userAge;
+// 1.1: Grab HTML with Jquery
+
+$("#growthRate-text").html("Compounding growth rate: " + growthRate + "%");
+
+
+// Chapter 2: Functions 
+// 2.1: Prompt functions that store variables
+function askUserAge() {
+    var userAge = prompt("Please enter your age:")
+} 
+
+function askUserSavings() {
+    var userSavings = prompt("Please enter your savings for this year:")
+}
+// 2.2: functions to calculate savings
+
+// Trigger Questions to Ask User
+alert("Please answer the following questions to get a calculation on how much your money is worth at retirement");
+askUserAge();
+askUserSavings();
+
+//
+
+</script>
+
+</body>
+
+</html>
